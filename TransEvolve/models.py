@@ -1,10 +1,10 @@
 import sys
 import tensorflow as tf
-from TransEvolve import utils
-from TransEvolve import TElayers
-from TransEvolve import core_layers
-from TransEvolve import beam_search
-from TransEvolve import bleu_hook
+from TransEvolve.TransEvolve import utils
+from TransEvolve.TransEvolve import TElayers
+from TransEvolve.TransEvolve import core_layers
+from TransEvolve.TransEvolve import beam_search
+from TransEvolve.TransEvolve import bleu_hook
 
 class EncoderDecoderModel(tf.keras.models.Model):
   def __init__(self,

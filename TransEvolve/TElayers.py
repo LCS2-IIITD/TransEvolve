@@ -1,5 +1,5 @@
 import tensorflow as tf
-import core_layers
+from TransEvolve.TransEvolve import core_layers
 
 class EncoderLayer(tf.keras.layers.Layer):
 
