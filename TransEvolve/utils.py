@@ -2,7 +2,7 @@ import numpy as np
 import tensorflow as tf
 import math
 
-def positional_encoding(length,
+def positional_embedding(length,
                           hidden_size,
                           min_timescale=1.0,
                           max_timescale=1.0e4):
