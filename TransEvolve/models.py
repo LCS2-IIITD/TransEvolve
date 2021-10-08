@@ -19,9 +19,8 @@ class EncoderDecoderModel(tf.keras.models.Model):
     super(EncoderDecoderModel, self).__init__()
     self.tiedEmbedding = core_layers.EmbeddingSharedWeights(vocab_size=input_dim, 
                                                 hidden_dim=hidden_dim)
-    self.pos_encoding = utils.positional_embedding(10000, 
-                                            hidden_dim,
-                                            learned=learned_pos_encoding)
+    self.pos_encoding = utils.positional_encoding(10000, 
+                                            hidden_dim)
     self.encoder = TElayers.Encoder(hidden_dim=hidden_dim,
                            num_head=num_head,
                            projection_type=projection_type,
