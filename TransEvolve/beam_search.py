@@ -2,7 +2,7 @@
 
 import tensorflow as tf
 
-import beam_search_v1 as v1
+from TransEvolve.TransEvolve import beam_search_v1 as v1
 
 
 _StateKeys = v1._StateKeys  # pylint: disable=protected-access
