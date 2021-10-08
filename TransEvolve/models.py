@@ -33,7 +33,6 @@ class EncoderDecoderModel(tf.keras.models.Model):
                            num_blocks=num_layers_per_block,
                            num_decoder=num_blocks,
                            dropout = dropout)
-    self.learned_pos_encoding = learned_pos_encoding
     
   def get_config(self):
     config = super().get_config().copy()
