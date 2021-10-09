@@ -3,12 +3,12 @@
 Implementation of [Redesigning the Transformer Architecture with Insights from Multi-particle Dynamical Systems](https://arxiv.org/abs/2109.15142), accepted as spotlight paper in NeurIPS 2021.
 This implementation is based on Tensorflow 2.4.1.
 
-##Usage
+## Usage
 After cloning the repository, 
 ```python
 from TransEvolve.TransEvolve import models
 ```
-####Sequence-to-sequence learning
+#### Sequence-to-sequence learning
 
 To use the full encoder-decoder TransEvolve model, use
 ```python
@@ -27,7 +27,7 @@ where
 product will be computed twice and evolved three times each;
 * `input_dim` denotes the size of the vocabulary for one-hot encoded sequences;
 
-####Encoder-only tasks
+#### Encoder-only tasks
 
 Similarly, only the TransEvolve encoder can be used as:
 ```python
@@ -54,3 +54,5 @@ model = models.ClassificationModel(
 ```
 `ClassificationModel` uses a single output projection layer on top of TransEvolve encoder. By default, it uses mean-pooling over the encoder output sequence. For `num_classes>2` it will apply softmax over the logits, else sigmoid.
 
+
+For any query, feel free to contact Subhabrata Dutta at subha0009@gmail.com.
