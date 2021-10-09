@@ -49,10 +49,7 @@ class EncoderDecoderModel(tf.keras.models.Model):
     dec_mask = tf.maximum(utils.create_padding_mask(tar_inp), 
                           utils.create_look_ahead_mask(tar_maxlen))
     ed_mask = utils.create_combined_mask(tar_inp, src_inp)
-    if self.learned_pos_encoding:
-        dec_in = self.tiedEmbedding(tar_inp) + self.pos_encoding(tar_inp)
-    else:
-        dec_in = self.tiedEmbedding(tar_inp) + self.pos_encoding[:, :tar_maxlen, :]
+    dec_in = self.tiedEmbedding(tar_inp) + self.pos_encoding[:, :tar_maxlen, :]
     dec_out = self.decoder(dec_in, v_enc, dec_mask, ed_mask, training)
 
     logits = self.tiedEmbedding(dec_out, mode='linear')
